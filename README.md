@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides readers with the data, quarto document, and pdf file to understand and reproduce a short analysis on song duration and danceability using tracks from the band Radiohead.
+This repository provides readers with the Quarto document and pdf file to view and understand a short analysis on song duration and danceability using tracks from the band Radiohead.
 
 
 ## File Structure
