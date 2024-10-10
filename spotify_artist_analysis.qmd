@@ -1,0 +1,104 @@
+---
+title: "Spotify Artist Analysis: Looking at the relationship between track duration and danceability for Radiohead"
+author: 
+  - Haowei Fan
+  - Tianning He
+  - Julia Lee
+  - Max Li
+  - Shuangyuan Yang
+date: today
+date-format: long
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+# Introduction
+
+From valence (how positive a song is) to loudness, there are many characteristics of music that come together to form a great track that everyone can enjoy. With this, it can be interesting to observe the interplay between these various characteristics. Thus, the aim of this short analysis is to investigate the interaction between a song's duration and its danceability (i.e. how acceptable a song is for dancing) using tracks from the band Radiohead. 
+
+# Data
+
+The data within this analysis is obtained from Spotify [@Spotify] through an API using the package `spotifyr` [@spotifyr]. The statistical programming language R is used [@citeR] to access and analyze the given data. Specific libraries that assisted the analysis include `tidyverse` [@tidyverse], `dplyr` [@dplyr], `ggplot2` [@ggplot2], and `knitr` [@knitr]. 
+
+For this analysis, we specifically considered the variables, "Duration" and "Danceability", for songs by the band Radiohead. Duration is the length of a track measured in milliseconds (ms) and danceability is measured on a scale from 0 to 1. The closer the danceability value is to 1, the better the song is for dancing. 
+
+\newpage
+
+# Results
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(httr)
+library(janitor)
+library(jsonlite)
+library(knitr)
+library(lubridate)
+library(purrr)
+library(rvest)
+library(tidyverse)
+library(usethis)
+library(tibble)
+
+edit_r_environ()
+
+library(spotifyr)
+```
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+# Spotify Data
+
+library(tibble)
+
+radiohead <- get_artist_audio_features("radiohead")
+saveRDS(radiohead, "radiohead.rds")
+
+radiohead <- readRDS("radiohead.rds")
+
+radiohead <- as_tibble(radiohead)
+```
+
+```{r}
+#| echo: false 
+#| message: false
+#| label: fig-durationdanceability
+#| fig-cap: The relationship between the duration (ms) and danceability of Radiohead's tracks.
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+radiohead |>
+  ggplot(aes(
+    x = duration_ms,
+    y = danceability,
+    group = valence
+  )) + geom_point(colour = "lightblue") +
+  theme_minimal() +
+  labs(
+    x = "Duration of Track (ms)",
+    y = "Danceability of Track", caption = "Data Source: Spotify") +
+  ggtitle("Radiohead Track Duration vs. Danceability") + 
+  theme(plot.title = element_text(hjust = 0.5)) 
+```
+
+By observing @fig-durationdanceability, we can see that there seems to be a somewhat positive relationship between a track's duration and its danceability. While the majority of Radiohead's songs appear to have a medium duration and danceability (i.e. the tracks centered in the middle of the graph), there are Radiohead songs that have a fairly short duration and low danceability value. Towards the right of @fig-durationdanceability, we can also notice some longer tracks that are better for dancing. This suggests that Radiohead songs that are better for dancing tend to be longer than those that are less suitable for dancing.  
+
+# Discussion 
+
+Using the band Radiohead's tracks, this short analysis looks to examine the relationship between song duration and danceability. The analysis finds that while it may be fairly weak, there seems to be a positive relationship between these two characteristics. There are longer Radiohead songs that are better to dance to, and there are shorter tracks that are less suitable for dancing. 
+
+These findings further imply that how long a song is could depend on other musical characteristics such as valence or loudness. Future research could identify these relationships to help form a better understanding of what makes a song danceable or popular. A limitation of the analysis is that it is unable to generalize its findings to music in general as it only considered a single artist - in this case, Radiohead. 
+
+\newpage
+
+
+# References
+
