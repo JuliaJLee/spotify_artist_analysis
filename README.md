@@ -10,9 +10,7 @@ This repository provides readers with the data, quarto document, and pdf file to
 The repository includes the following files:
 
 - The `.Rproj` file for this analysis
-- The Radiohead artist data (`radiohead.rds`)
-- The quarto document that was used to create the analysis
-- The pdf file for the complete analysis
+- A folder named `paper` that contains: (1) The quarto document that was used to create the analysis, (2) the bib.tex file for the references, and (3) the pdf file for the complete analysis
 
 ## Statement on LLM usage
 
