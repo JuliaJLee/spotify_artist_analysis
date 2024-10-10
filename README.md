@@ -9,10 +9,11 @@ This repository provides readers with the data, quarto document, and pdf file to
 
 The repository includes the following files:
 
-- The `.Rproj` file for this analysis
-- The Radiohead artist data (`radiohead.rds`)
-- The quarto document that was used to create the analysis
-- The pdf file for the complete analysis
+- The `.Rproj` file for this analysis.
+- The `other` folder contains a sketch for the analysis
+- The `scripts` folder contains a script with the code for downloading and saving the data.
+- The `data/01-raw_data` folder holds the Radiohead artist data (`radiohead.rds`).
+- The `paper` folder includes the Quarto document that was used to create the analysis and the pdf file for the complete analysis.
 
 ## Statement on LLM usage
 
