@@ -11,9 +11,9 @@ The repository includes the following files:
 
 - The `.Rproj` file for this analysis
 - A folder named `paper` that contains
-    - (1) The quarto document that was used to create the analysis
-    - (2) The bib.tex file for the references
-    - (3) The pdf file for the complete analysis
+    - The quarto document that was used to create the analysis
+    - The bib.tex file for the references
+    - The pdf file for the complete analysis
 
 ## Statement on LLM usage
 
