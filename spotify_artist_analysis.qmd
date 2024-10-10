@@ -6,6 +6,7 @@ author:
   - Julia Lee
   - Max Li
   - Shuangyuan Yang
+  - Jingchuan Xu
 date: today
 date-format: long
 format: pdf
