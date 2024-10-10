@@ -1,11 +1,10 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from Spotify API
+# Author: Haowei Fan, Tianning He, Julia Lee, Max Li, Shuangyuan Yang,Jingchuan Xu
+# Date: 10 October 2024 
+# Contact: Group 51
+# Pre-requisites: NONE
+# Any other information needed? NONE
 
 
 #### Workspace setup ####
