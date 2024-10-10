@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides readers with the Quarto document and pdf file to view and understand a short analysis on song duration and danceability using tracks from the band Radiohead.
+This repository provides readers with the data, quarto document, and pdf file to understand and reproduce a short analysis on song duration and danceability using tracks from the band Radiohead.
 
 
 ## File Structure
@@ -10,10 +10,9 @@ This repository provides readers with the Quarto document and pdf file to view a
 The repository includes the following files:
 
 - The `.Rproj` file for this analysis
-- A folder called, `paper`, that contains:
-    - The quarto document that was used to create the analysis
-    - The bib.tex file for the references
-    - The pdf file for the complete analysis
+- The Radiohead artist data (`radiohead.rds`)
+- The quarto document that was used to create the analysis
+- The pdf file for the complete analysis
 
 ## Statement on LLM usage
 
