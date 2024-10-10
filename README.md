@@ -7,12 +7,12 @@ This repository provides readers with the data, quarto document, and pdf file to
 
 ## File Structure
 
-The repository contains the following files:
+The repository includes the following files:
 
-- The `.Rproj` file
-- The Radiohead artist data 
-- The quarto document 
-- The pdf file 
+- The `.Rproj` file for this analysis
+- The Radiohead artist data (`radiohead.rds`)
+- The quarto document that was used to create the analysis
+- The pdf file for the complete analysis
 
 ## Statement on LLM usage
 
