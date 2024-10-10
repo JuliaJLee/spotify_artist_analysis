@@ -10,7 +10,7 @@ This repository provides readers with the data, quarto document, and pdf file to
 The repository includes the following files:
 
 - The `.Rproj` file for this analysis
-- A folder named `paper` that contains
+- A folder called, `paper`, that contains:
     - The quarto document that was used to create the analysis
     - The bib.tex file for the references
     - The pdf file for the complete analysis
